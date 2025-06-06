@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "blog_posting"
+version = "0.2.0"
+description = ""
+authors = ["Marcelo Fachinelli <mvp.poa@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.12,<=3.13"
+crewai = {extras = ["tools"], version = "^0.85.0"}
+python-dotenv = "^1.0.1"
+setuptools = "^80.9.0"
+duckduckgo-search = "^8.0.2"
+
+[tool.poetry.scripts]
+blog_posting = "blog_posting.main:run"
+train = "blog_posting.main:train"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
